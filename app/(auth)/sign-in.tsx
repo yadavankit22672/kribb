@@ -11,7 +11,7 @@ import {
   View,
 } from "react-native";
 
-export default function SigIn() {
+export default function SignIn() {
   const { signIn, errors, fetchStatus } = useSignIn();
 
   const router = useRouter();
@@ -163,7 +163,7 @@ export default function SigIn() {
             autoCapitalize="none"
           />
         </View>
-        {errors.fields.identifier && (
+        {errors?.fields?.identifier && (
           <Text className="text-red-500">
             {errors.fields.identifier.message}
           </Text>
@@ -179,7 +179,7 @@ export default function SigIn() {
             secureTextEntry
           />
         </View>
-        {errors.fields.password && (
+        {errors?.fields?.password && (
           <Text className="text-red-500">{errors.fields.password.message}</Text>
         )}
 
